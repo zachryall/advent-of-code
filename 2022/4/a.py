@@ -1,29 +1,31 @@
 """
-Advent of Code 2022 - Day 4a
+Advent of Code 2022 - Day 4a - 530
 """
+
+import re
 
 TOTAL = 0
 
-with open('example.txt', 'r', encoding='UTF-8') as file:
+with open('input.txt', 'r', encoding='UTF-8') as file:
     lines = file.readlines()
 
     for line in lines:
-        areas = line.split(',')
+        trim = line.rstrip()
+        areas = trim.split(',')
 
-        firstArea = areas[0].split('-')
-        firstLength = int(firstArea[1]) - int(firstArea[0]) + 1
+        split = re.split('[-,]', line.rstrip())
 
-        secondArea = areas[1].split('-')
-        secondLength = int(secondArea[1]) - int(secondArea[0]) + 1
+        firstLength = int(split[1]) - int(split[0])
+        secondLength = int(split[3]) - int(split[2])
 
-
-        if firstLength == secondLength and int(firstArea[0]) == int(secondArea[0]):
-            TOTAL += 1
+        if firstLength == secondLength:
+            if int(split[0]) == int(split[2]):
+                TOTAL += 1
         elif firstLength > secondLength:
-            if firstArea[0] <= secondArea[0] and firstArea[1] >= secondArea[1]:
+            if split[0] <= split[2] and split[1] >= split[3]:
                 TOTAL += 1
         elif firstLength < secondLength:
-            if firstArea[0] >= secondArea[0] and firstArea[1] <= secondArea[1]:
+            if split[0] >= split[2] and split[1] <= split[3]:
                 TOTAL += 1
 
     print(TOTAL)
