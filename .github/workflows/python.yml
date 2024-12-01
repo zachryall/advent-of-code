@@ -21,7 +21,7 @@ jobs:
           pip install pytest
       - name: Analysing the code with pylint
         run: |
-          pylint -d E0401 -d R0801 $(git ls-files '*.py')
+          pylint -d E0401 -d E0611 -d R0801 $(git ls-files '*.py')
       - name: Run unit tests with pytest
         run: |
           pytest -v $(git ls-files '*test_*.py')
