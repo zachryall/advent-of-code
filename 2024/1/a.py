@@ -1,22 +1,36 @@
 """
-Advent of Code 2024 - Day 1a - 1830467
+Advent of Code 2024 - Day 1a - 1830478
 """
 
-ANSWER = 0
-idsA = []
-idsB = []
+from pathlib import Path
 
-with open('input.txt', 'r', encoding='UTF-8') as file:
-    lines = file.readlines()
-    for line in lines:
-        row = line.rstrip().split('   ')
-        idsA.append(int(row[0]))
-        idsB.append(int(row[1]))
+ids_a = []
+ids_b = []
 
-idsA.sort()
-idsB.sort()
+def main(file_name):
+    """Main function
 
-for index, content in enumerate(idsA):
-    ANSWER += abs(content - idsB[index])
+    :param file_name: The file that contexts the puzzle input
+    """
 
-print(ANSWER)
+    answer = 0
+    path = Path(__file__).with_name(file_name)
+    with path.open('r', encoding='UTF-8') as file:
+        lines = file.readlines()
+        for line in lines:
+            row = line.rstrip().split('   ')
+            ids_a.append(int(row[0]))
+            ids_b.append(int(row[1]))
+
+    ids_a.sort()
+    ids_b.sort()
+
+    for index, content in enumerate(ids_a):
+        answer += abs(content - ids_b[index])
+    return answer
+
+answer_example = main('example.txt')
+answer_input = main('input.txt')
+
+print(f'Example Input: {answer_example}')
+print(f'Puzzle Input: {answer_input}')
