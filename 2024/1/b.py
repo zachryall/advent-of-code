@@ -1,10 +1,10 @@
 """
-Advent of Code 2024 - Day 1b
+Advent of Code 2024 - Day 1b - 26674158
 """
 
+ANSWER = 0
 idsA = []
 idsB = []
-TOTAL = 0
 
 with open('input.txt', 'r', encoding='UTF-8') as file:
     lines = file.readlines()
@@ -14,6 +14,6 @@ with open('input.txt', 'r', encoding='UTF-8') as file:
         idsB.append(int(row[1]))
 
 for content in idsA:
-    TOTAL += content * (idsB.count(content))
+    ANSWER += content * (idsB.count(content))
 
-print(TOTAL)
+print(ANSWER)

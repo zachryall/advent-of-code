@@ -1,6 +1,7 @@
 # Folders
 /.idea/
 /.scannerwork/
+**/**/__pycache__/
 
 # Files
 /notes.txt

@@ -2,9 +2,9 @@
 Advent of Code 2024 - Day 1a - 1830467
 """
 
+ANSWER = 0
 idsA = []
 idsB = []
-TOTAL = 0
 
 with open('input.txt', 'r', encoding='UTF-8') as file:
     lines = file.readlines()
@@ -17,6 +17,6 @@ idsA.sort()
 idsB.sort()
 
 for index, content in enumerate(idsA):
-    TOTAL += abs(content - idsB[index])
+    ANSWER += abs(content - idsB[index])
 
-print(TOTAL)
+print(ANSWER)
