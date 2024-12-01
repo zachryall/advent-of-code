@@ -1,6 +1,9 @@
 # Folders
 /.idea/
 /.scannerwork/
+**/**/__pycache__/
+/.template/
 
 # Files
-/notes.txt
+notes.txt
+coverage.xml
