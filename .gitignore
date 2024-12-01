@@ -5,5 +5,8 @@
 **/**/__pycache__/
 
 # Files
-notes.txt
+.coverage
 coverage.xml
+notes.txt
+**/**/.coverage
+**/**/coverage.xml
