@@ -1,2 +1,12 @@
+# Folders
 /.idea/
-/2023/
+/.scannerwork/
+/.template/
+**/**/__pycache__/
+
+# Files
+.coverage
+coverage.xml
+notes.txt
+**/**/.coverage
+**/**/coverage.xml
