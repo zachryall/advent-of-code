@@ -1,4 +1,4 @@
-name: Pylint
+name: Python
 
 on: [push]
 
@@ -24,4 +24,4 @@ jobs:
           pylint --disable R0801 $(git ls-files '*.py')
       - name: Run unit tests with pytest
         run: |
-          pytest -v $(git ls-files 'test_*.py')
+          pytest -v $(git ls-files '*test_*.py')
