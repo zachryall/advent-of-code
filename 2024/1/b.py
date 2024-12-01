@@ -31,4 +31,3 @@ answer_input = main('input.txt')
 
 print(f'Example Input: {answer_example}')
 print(f'Puzzle Input: {answer_input}')
-

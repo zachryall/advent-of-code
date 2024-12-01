@@ -23,4 +23,3 @@ def test_part_b_answer_is_correct():
     """Test to check that part A's input gets the correct answer
     """
     assert b_input == 26674158
-
