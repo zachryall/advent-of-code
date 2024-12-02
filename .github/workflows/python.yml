@@ -21,7 +21,7 @@ jobs:
           pip install pytest
       - name: Analysing the code with pylint
         run: |
-          pylint --disable R0801 $(git ls-files '*.py')
+          pylint --disable R0801 $(git ls-files '*.py' | grep -v test)
       - name: Run unit tests with pytest
         run: |
-          pytest -v $(git ls-files '*test_*.py' | grep -v test)
+          pytest -v $(git ls-files '*test_*.py')
