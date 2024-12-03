@@ -1,8 +1,9 @@
 # Folders
 # Folders
-/.idea/
-/.scannerwork/
-/.template/
+.idea/
+.scannerwork/
+.template/
+.vscode/
 **/**/__pycache__/
 **/**/.scannerwork/
 
@@ -10,3 +11,4 @@
 notes.txt
 coverage.xml
 **/**/.coverage
+.vscode/settings.json
