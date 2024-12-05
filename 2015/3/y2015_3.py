@@ -5,6 +5,14 @@ Advent of Code 2015 - Day 3
 from pathlib import Path
 
 def travel(directions_list):
+    """Calculate Santa's travels
+
+    Args:
+        directions_list (list): A list of directions to be taken
+
+    Returns:
+        list: A list of coordinates that were travelled to
+    """
     history = [0,0]
     x, y = 0, 0
     for arrow in directions_list:
