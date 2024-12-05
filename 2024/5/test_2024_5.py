@@ -1,7 +1,7 @@
-"""Advent of Code 2024 Day 3 Tests
+"""Advent of Code 2024 Day 5 Tests
 """
 
-from d4 import ANSWER_EXAMPLE_A as a_example, ANSWER_EXAMPLE_B as b_example, ANSWER_INPUT_A as a_input, ANSWER_INPUT_B as b_input
+from d5 import ANSWER_EXAMPLE_A as a_example, ANSWER_EXAMPLE_B as b_example, ANSWER_INPUT_A as a_input, ANSWER_INPUT_B as b_input
 
 def test_part_a_example_is_correct():
     """Test to check that part A's example gets the correct answer

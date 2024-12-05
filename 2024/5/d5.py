@@ -1,5 +1,5 @@
 """
-Advent of Code 2024 - Day 4
+Advent of Code 2024 - Day 5
 """
 
 from pathlib import Path
