@@ -52,6 +52,6 @@ def main(file_name, part):
     answer = list(dict.fromkeys(answer))
     return len(answer)
 
-ANSWER_A, ANSWER_B = main('input.txt', 1), main('input.txt', 2)
+ANSWER_A, ANSWER_B = main('input.txt', 1), main('input.txt', 2) - 1
 print(f'Part 1 - Puzzle Input: {ANSWER_A}')
-print(f'Part 2 - Puzzle Input: {ANSWER_B - 1}')
+print(f'Part 2 - Puzzle Input: {ANSWER_B}')
